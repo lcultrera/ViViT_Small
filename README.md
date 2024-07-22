@@ -16,6 +16,9 @@ model = VITSmall(
     dropout = 0.1,
     emb_dropout = 0.1,
 )
- 
+
 model.cuda()
+img = torch.rand(batch, 3, 224, 224)
+out = model(img) # (batch, 24)
+
 ````
